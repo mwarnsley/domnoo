@@ -1,9 +1,15 @@
 <template>
   <div class="container menu_container">
-    <div class="top">
+    <div
+      class="top"
+      v-scroll-reveal.reset
+    >
       <h2>Menu</h2>
     </div>
-    <div class="buttons">
+    <div
+      class="buttons"
+      v-scroll-reveal.reset="{ delay: 250 }"
+    >
       <md-button
         :class="button.active ? 'md-raised' : ''"
         @click="changeMenu(button.name)"
