@@ -3,19 +3,23 @@
     <div class="container">
       <div
         class="first"
-        vue-scroll-reveal.reset="{ delay: 200, scale: 2}"
+        v-scroll-reveal.reset="{ delay: 200, scale: 2}"
       >
         <h1>Hungry ?</h1>
       </div>
       <div
         class="second"
-        vue-scroll-reveal.reset="{ delay: 400, scale: 2}"
+        v-scroll-reveal.reset="{ delay: 300, afterReveal: () => {
+            secondAnim = true
+        }}"
       >
-        <Anim />
+        <div v-if="secondAnim">
+          <Anim />
+        </div>
       </div>
       <div
         class="third"
-        vue-scroll-reveal.reset="{ delay: 600, scale: 2}"
+        v-scroll-reveal.reset="{ delay: 600, scale: 2}"
       >
         <span>Give us a call</span>
         <span>555-555-5555</span>
@@ -32,6 +36,11 @@ export default {
   name: "CallUs",
   components: {
     Anim
+  },
+  data() {
+    return {
+      secondAnim: false
+    };
   }
 };
 </script>

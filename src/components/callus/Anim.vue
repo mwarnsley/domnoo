@@ -11,6 +11,50 @@
         left="100"
       ></div>
     </transition>
+    <transition
+      appear
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+    >
+      <div
+        class="plus one"
+        delay="100"
+        left="310"
+      >+</div>
+    </transition>
+    <transition
+      appear
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+    >
+      <div
+        class="icon icon_delivery"
+        delay="200"
+        left="480"
+      ></div>
+    </transition>
+    <transition
+      appear
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+    >
+      <div
+        class="plus"
+        delay="300"
+        left="750"
+      >=</div>
+    </transition>
+    <transition
+      appear
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+    >
+      <div
+        class="icon icon_pizza"
+        delay="400"
+        left="900"
+      ></div>
+    </transition>
   </div>
 </template>
 
@@ -29,7 +73,7 @@ export default {
       Velocity(
         el,
         { opacity: 1, left },
-        { delay, duration: 2000 },
+        { delay, duration: 500 },
         { complete: done }
       );
     }
@@ -46,11 +90,11 @@ export default {
   background-size: cover !important;
   position: absolute;
 }
-.icon_phone {
-  background: url("../../assets/images/icons/icon-phone.png");
-  height: 130px;
-  top: 30px;
-  width: 130px;
+.plus {
+  color: #ffffff;
+  font-size: 160px;
+  position: absolute;
+  top: 90px;
 }
 .icon_phone {
   background: url("../../assets/images/icons/icon-phone.png");
@@ -58,22 +102,14 @@ export default {
   top: 30px;
   width: 130px;
 }
-.icon_phone {
-  background: url("../../assets/images/icons/icon-phone.png");
-  height: 130px;
-  top: 30px;
-  width: 130px;
+.icon_delivery {
+  background: url("../../assets/images/icons/icon-delivery.png");
+  height: 200px;
+  width: 200px;
 }
-.icon_phone {
-  background: url("../../assets/images/icons/icon-phone.png");
-  height: 130px;
-  top: 30px;
-  width: 130px;
-}
-.icon_phone {
-  background: url("../../assets/images/icons/icon-phone.png");
-  height: 130px;
-  top: 30px;
-  width: 130px;
+.icon_pizza {
+  background: url("../../assets/images/icons/icon-pizza.png");
+  height: 200px;
+  width: 200px;
 }
 </style>
