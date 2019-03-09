@@ -1,11 +1,12 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header />
     <div>
-      <featured></featured>
+      <featured />
       <Menu />
+      <call-us />
     </div>
-    <app-footer></app-footer>
+    <app-footer />
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 <script>
 import AppHeader from "./components/header-footer/Header.vue";
 import AppFooter from "./components/header-footer/Footer.vue";
+import CallUs from "./components/callus/CallUs.vue";
 import Featured from "./components/featured/Featured.vue";
 import Menu from "./components/menu/Menu.vue";
 
@@ -21,6 +23,7 @@ export default {
   components: {
     AppHeader,
     AppFooter,
+    CallUs,
     Featured,
     Menu
   }
