@@ -13,3 +13,9 @@ export const firebaseLooper = data => {
 
     return newDataset;
 };
+
+// Function that validates the email address
+export const validateEmail = email => {
+    const regex = /\S+@\S+\.\S+/;
+    return regex.test(email);
+};

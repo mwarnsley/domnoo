@@ -5,6 +5,7 @@
       <featured />
       <Menu />
       <call-us />
+      <news-letter />
     </div>
     <app-footer />
   </div>
@@ -17,6 +18,7 @@ import AppFooter from "./components/header-footer/Footer.vue";
 import CallUs from "./components/callus/CallUs.vue";
 import Featured from "./components/featured/Featured.vue";
 import Menu from "./components/menu/Menu.vue";
+import NewsLetter from "./components/newsletter/Newsletter.vue";
 
 export default {
   name: "app",
@@ -25,7 +27,8 @@ export default {
     AppFooter,
     CallUs,
     Featured,
-    Menu
+    Menu,
+    NewsLetter
   }
 };
 </script>
